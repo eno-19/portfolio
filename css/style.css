@@ -53,8 +53,14 @@
 
 /*-----FONT END-----*/
 
-body {background-color: #fff8f1;
-    overflow-x: hidden;
+html {
+  overflow-x: clip;
+}
+
+body {
+  background-color: #fff8f1;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 *, *::before, *::after {
@@ -330,8 +336,11 @@ footer {
 
 .head-first {
     height: 90vh;
-    color: #fff8f1;
-    background: linear-gradient(180deg, #9B0002 50%, #FFF8F1 100%);
+    color: #470101;
+    background-image: url('../img/illu-head-travaux.png');
+    background-size: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .head-first div {
@@ -341,7 +350,7 @@ footer {
 .head-first h1 {
     padding-top: 25px;
     font-size: 3rem;
-    color: #FFF8F1;
+    color: #841010;
     margin-left: 15px;
 }
 
@@ -565,10 +574,6 @@ a.button:hover, a.button:active {
     margin: 0 15px;
 }
 
-.lien-info {
-    margin: 0 25px;
-}
-
 .parcours {
     margin: 0 15px;
 }
@@ -593,13 +598,17 @@ a.button:hover, a.button:active {
     border-radius: 500px;
     box-shadow: 5px 5px 0 0 #F3D3B5;
     margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+.cont-cock {
+    position: relative;
 }
 
 .cocktail {
-    display: block;
-    width: 250%;
-    height: auto;
-    margin-left: -80%;
+    position: absolute;
+    max-height: 100%;
+    right: -35%;
 }
 
 .txt-passer p {
@@ -621,9 +630,9 @@ a.button:hover, a.button:active {
 }
 
 .moi-draw {
-    width: 65%;
+    width: 50%;
     height: auto;
-    margin-left: 30%;
+    margin-left: 45%;
     display: block;
     border-top: 5px solid #9B0002;
     border-left: 3px solid #9B0002;
@@ -666,6 +675,12 @@ a.button:hover, a.button:active {
     padding: 25px 0;
 }
 
+.aptitude .liste li {
+    text-align: start;
+    background-color: rgba(255, 248, 241, 0.5);
+    border-radius: 20px;
+}
+
 .etude {
     margin: 0 15px;
 }
@@ -687,31 +702,26 @@ a.button:hover, a.button:active {
 
 .head-travaux {
     min-height: 90vh;
-    background: linear-gradient(180deg, #FFF8F1 0%, #841010 86.06%);
+    background: linear-gradient(180deg, #9B0002 50%, #FFF8F1 100%);
 }
 
 .rond-fond {
-    max-width: 333px;
-    height: 600px;
-    border-radius: 100%;
-    background: #FFF8F1;
     margin: 0 auto;
-    border: #9B0002 solid 5px;
 }
 
 .head-travaux h1 {
-    color: #9B0002;
+    color: #FFF8F1;
     text-align: center;
-    padding-top: 75%;
-    text-shadow: 8px 7px 0 #F3D3B5;
+    padding-top: 25vh;
+    text-shadow: 12px 10px 0 #841010;
 }
 
 .head-travaux p {
-    color: #9B0002;
+    color: #FFF8F1;
     font-family: 'BigSexySans';
     font-size: 1.5rem;
     text-align: center;
-    text-shadow: 5px 3px 0 #F3D3B5;
+    text-shadow: 8px 5px 0 #841010;
 }
 
 .works {
@@ -924,6 +934,7 @@ a.button:hover, a.button:active {
     font-family: 'Melodrama';
     font-size: 1.5rem;
     color: #1c0303;
+    text-align: start;
 }
 
 .liste li::before {
@@ -944,6 +955,7 @@ a.button:hover, a.button:active {
     color: #1c0303;
     font-family: 'Melodrama';
     text-decoration: none;
+    font-size: 1.2rem;
 }
 
 a.info-pratique:hover, a.info-pratique:active {
@@ -1005,6 +1017,10 @@ a.info-pratique:hover, a.info-pratique:active {
 .work-head .row {
     position: relative;
     z-index: 2;              /* en haut */
+}
+
+.txt-journal p {
+    font-size: 1rem;
 }
 
 /*-----JOURNAL END-----*/
@@ -1177,17 +1193,74 @@ footer h4 {
 }
 
 .head-intro h1 {
-    font-size: 3.5rem;
+    font-size: 3.5rem !important;
 }
 
 .head-intro h2 {
-    font-size: 2.5rem;
+    font-size: 2.5rem !important;
 }
 
 /*taille pour header propos END !!!*/
 
 
+/*---PROPOS---*/
+
+.head-intro p {
+    font-size: 2rem !important;
+}
+
+.parcours .phrase {
+    font-size: 2.2rem;
+}
+
+.cellule li {
+    font-size: 1.8rem;
+    margin-bottom: 50px;
+}
+
+.cocktail {
+    right: 0;
+}
+
+.txt-passer p {
+    font-size: 1.5rem;
+}
+
+.progress {
+    height: 50px;
+    margin-bottom: 50px;
+}
+
+.liste li::before {
+    width: 75px;
+}
+
+.aptitude .liste {
+    padding: 80px 0;
+}
+
+.aptitude .liste li {
+    margin-bottom: 50px;
+}
+
+.aptitude .liste li p {
+    font-size: 2rem;
+}
+
+.titre-etude {
+    font-size: 1.8rem !important;
+}
+
     /*-----Taille texte TRAVAUX-----*/
+
+.head-travaux h1 {
+    padding-top: 30vh;
+    font-size: 3.5rem;
+}
+
+.head-travaux p {
+    font-size: 3rem;
+}
 
 .work-title {
     font-size: 2.5rem;
@@ -1275,9 +1348,24 @@ footer h4 {
     margin: 2%;
 }
 
+
+/*JOURNAL !!!*/
+
+.txt-journal p {
+    font-size: 1.5rem;
+}
+
         }
 
 @media (min-width: 992px) {
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 2.2rem;
+    }
 
     /*Head !!!*/
 .head-first h1 {
@@ -1362,15 +1450,15 @@ footer h4 {
 }
 
 .head-intro {
-    padding-top: 55vh;
+    padding-top: 60vh;
 }
 
 .head-intro h1 {
-    font-size: 3.5rem;
+    font-size: 5rem !important;
 }
 
 .head-intro h2 {
-    font-size: 2.5rem;
+    font-size: 3.5rem !important;
 }
 
 /*taille pour header propos END !!!*/
@@ -1414,6 +1502,57 @@ a.button:hover {
 
 /*Responsive index END !!!*/
 
+/*---PROPOS !!!----*/
+
+.head-propos p {
+    font-size: 2.5rem !important;
+}
+
+.aptitude .liste {
+    padding: 100px 0;
+}
+
+.progress {
+    height: 100px;
+}
+
+.progress-badge {
+    margin-left: -35px;
+}
+
+.aptitude .liste li p {
+    font-size: 2.5rem;
+}
+
+.titre-etude {
+    font-size: 2.5rem !important;
+}
+
+.parcours .phrase {
+    font-size: 2.5rem;
+}
+
+.cellule li {
+    font-size: 2.2rem;
+}
+
+.cocktail {
+    right: 0;
+}
+
+.txt-passer p {
+    font-size: 1.8rem;
+    max-width: 75%;
+}
+
+
+/*JOURNAL !!!*/
+
+.txt-journal p {
+    font-size: 1.8rem;
+    max-width: 70%;
+}
+
 }
 
 
@@ -1430,9 +1569,6 @@ a.button:hover {
     font-size: 4rem;
     margin: 0 5%
 }
-
-.petit-txt {padding-top: 0;
-width: 100%;}
 
 .head-first h1:nth-of-type(2) {
     margin: 0 5%;
@@ -1489,23 +1625,23 @@ footer h4 {
 .eno1 {
     bottom: -40%;
     left: 50px;
-    width: 15% !important;
+    width: 20% !important;
 }
 
 .eno2 {
     left: 250px;
-    width: 25% !important;
+    width: 35% !important;
 }
 
 .eno3 {
-    top: 0;
+    top: 25%;
     left: 500px;
-    width: 33% !important;
+    width: 45% !important;
 }
 
 .eno4 {
     right: 50px;
-    width: 22% !important;
+    width: 25% !important;
 }
 
 .head-propos {
@@ -1513,7 +1649,7 @@ footer h4 {
 }
 
 .head-intro {
-    padding-top: 60vh;
+    padding-top: 65vh;
 }
 
 .head-intro h1 {
