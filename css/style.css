@@ -1040,6 +1040,11 @@ a.info-pratique:hover, a.info-pratique:active {
  @media (min-width: 768px) {
 
 /*Head !!!*/
+
+.head-first {
+    background-size: 100%;
+}
+
 .head-first h1 {
     padding-top: 5%;
     font-size: 4rem;
@@ -1368,10 +1373,6 @@ footer h4 {
     }
 
     /*Head !!!*/
-
-.head-first {
-    background-size: 100%;
-}
 
 .head-first h1 {
     padding-top: 5%;
